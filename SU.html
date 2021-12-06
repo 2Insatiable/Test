@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="Monkey.css">
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="TFC.html">TFC</a>
+        <a class="active" href="SU.html">Sign-Up</a>
+        <a href="LOP.html">LOP</a>
+        <div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+      </div>
+      <h1 style="font-size:3vw">Sign Up</h1>
+      <p id="userDisplay" style="text-align: right;">Username: </p>
+      <p id="passDisplay" style="text-align: right;">Password: </p>
+    <form id="SignUp" style="font-size:2vw">
+        Username: <input type="text" name="user" value="" id="username" style="font-size:2vw"><br>
+        Email: <input type="email" name="email" value="" id="email" style="font-size:2vw"><br>
+        Password: <input type="password" name="pass" value="" id="password" style="font-size:2vw"><br>
+        ConfirmPassword: <input type="password" name="cpass" value="" id="ConfirmPassword" style="font-size:2vw"><br>
+        Social Security Number: <input type="text" name="ssn" value="" id="ssn" style="font-size:2vw"><br>
+      </form> 
+      <button style="font-size:2vw" onclick= "myVar = setTimeout(TextInput, 100)">Sign Up</button>
+      <hr>
+      <br>
+      <h1 style="font-size:3vw">Log In</h1>
+      <form id="LogIns" style="font-size:2vw">
+        Username: <input type="text" name="user" value="" id="username2" style="font-size:2vw"><br>
+        Password: <input type="password" name="pass" value="" id="password2" style="font-size:2vw"><br>
+    </form>
+        <button style="font-size:2vw" onclick= "login = setTimeout(TextInput2, 100)">Log in</button>
+            <script>
+          function TextInput() {
+            var x = document.getElementById("SignUp");
+            text = x.elements[0].value;
+            text2 = x.elements[1].value;
+            text3 = x.elements[2].value;
+            text4 = x.elements[3].value;
+            text5 = x.elements[4].value;
+    
+            if (text3 != text4) {
+                alert("Confirm Password and Password do not match");
+            }else {
+                document.getElementById("userDisplay").innerHTML = "Username: " + text;
+            document.getElementById("passDisplay").innerHTML = "Password: ********";
+            var localuser = text
+            var localpass = text3
+            }
+          }
+          function TextInput2() {
+              var x = document.getElementById("LogIns");
+              text = x.elements[0].value;
+              text2 = x.elements[1].value;
+
+              if (text == "name" & text2 == "55555") {
+                document.getElementById("userDisplay").innerHTML = "Username: " + text;
+                  document.getElementById("passDisplay").innerHTML = "Password: ***********";
+
+              }else {
+                alert("Account doesn't exist");
+              }
+          }
+      </script>
+</html>
+
+
